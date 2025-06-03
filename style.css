@@ -1,0 +1,117 @@
+/* style.css */
+
+/* Import a clean, readable font if desired (e.g., from Google Fonts) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
+
+/* Basic dark theme and gradient background (similar to frontmatter for consistency) */
+.slidev-layout {
+  /* font-family: 'Roboto', sans-serif; */
+  background-color: #1a1a2e; /* Dark blue/purple base */
+  color: #e0e0e0; /* Light text color */
+}
+
+/* Apply gradient to the default layout background if not overridden by slide-specific background */
+.slidev-layout.default {
+  background-image: linear-gradient(45deg, #1e3c72, #2a5298);
+}
+
+/* Headings with accent color/gradient */
+h1, h2, h3, h4, h5, h6 {
+  color: #87CEFA; /* Light Sky Blue as an accent */
+  font-weight: bold;
+}
+
+h1 {
+  /* Example of gradient text for main titles - might need specific class for title slide */
+  /* background: -webkit-linear-gradient(45deg, #87CEFA, #BA55D3); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+/* Links styling */
+a {
+  color: #ADD8E6; /* Light blue */
+  text-decoration: none;
+  border-bottom: 1px dotted #ADD8E6;
+}
+a:hover {
+  color: #87CEFA;
+  border-bottom-style: solid;
+}
+
+/* Code block styling */
+.shiki { /* Shiki is the default highlighter */
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  line-height: 1.4;
+  overflow-x: auto;
+  background-color: #2d2d2d !important; /* Darker background for code blocks */
+}
+
+code {
+  font-family: 'Fira Code', 'Courier New', monospace; /* Use a common coding font */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre code { /* Reset for code inside pre */
+  background-color: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Emoji sizing consistency */
+.slidev-page emoji, .slidev-layout emoji { /* Target emojis if they are wrapped or have a class */
+  font-size: 1.2em; /* Adjust as needed */
+  vertical-align: middle;
+}
+/* For common emojis used directly as text */
+body { /* This is a broad selector, consider more specific ones if emojis are used in text */
+  /* Example: text with emoji */
+  /* line-height: 1.6; to ensure emojis don't mess up line height */
+}
+
+
+/* Smooth transitions (Slidev handles slide transitions, this is for elements if needed) */
+.animated-element {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Responsive design considerations */
+@media (max-width: 768px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  body { font-size: 14px; }
+}
+
+/* Custom class for gradient text if needed */
+.gradient-text {
+  background: linear-gradient(45deg, #87CEFA, #BA55D3, #FF69B4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* Example for title slide H1 if frontmatter class isn't enough */
+.slidev-layout.cover h1, .slidev-layout.text-center h1.title-gradient {
+  background: linear-gradient(45deg, #87CEFA, #BA55D3, #FF69B4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  padding-bottom: 0.2em; /* Add some padding if needed */
+}
+
+/* Ensure Slidev presenter notes are not styled by mistake if you use broad selectors */
+.slidev-notes {
+  color: initial; /* Or specific styling for notes if desired */
+  background-color: initial;
+}
