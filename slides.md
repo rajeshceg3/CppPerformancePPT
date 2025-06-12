@@ -60,10 +60,8 @@ layout: default
 - Reduced user engagement 💔
 - Competitive disadvantage 🐌
 
-:::กาซ้อน
-layout: center
----
-<img src="/memes/meme_O_n_factorial_horror.txt" alt="Meme: O(n!) horror - A character looking horrified/panicked at a computer screen" class="mx-auto my-4 max-h-60">
+::layout: center ---
+<img src="/memes/meme_O_n_factorial_horror.png" alt="A character looks horrified while staring at a computer screen displaying 'O(n!)'" class="mx-auto my-4 max-h-60">
 :::
 ---
 layout: default
@@ -138,10 +136,8 @@ layout: default
 
 **Key takeaway**: Algorithmic complexity often has the BIGGEST impact on performance for large inputs.
 
-:::กาซ้อน
-layout: center
----
-<img src="/memes/meme_O_n_squared_oops.txt" alt="Meme: O(n^2) oops - A character sweating profusely" class="mx-auto my-4 max-h-60">
+::layout: center ---
+<img src="/memes/meme_O_n_squared_oops.png" alt="A character is sweating profusely, reacting to 'O(n^2)' complexity." class="mx-auto my-4 max-h-60">
 :::
 ---
 layout: default
@@ -277,7 +273,7 @@ class: text-center
 
 # Cache Misses Be Like... 😭
 
-<img src="/memes/meme_cache_miss_pain.txt" alt="Meme: Cache misses be like - A character waiting impatiently" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_cache_miss_pain.png" alt="A character waits impatiently, captioned 'Cache Misses Be Like...'" class="mx-auto my-4 max-h-60">
 
 *(Imagine the CPU sighing dramatically)*
 ---
@@ -423,7 +419,7 @@ class: text-center
 
 # Template Errors Be Like... 🤯
 
-<img src="/memes/meme_template_error_wall.txt" alt="Meme: Template errors - A huge wall of cryptic text" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_template_error_wall.png" alt="A developer faces a massive, overwhelming wall of cryptic template error messages." class="mx-auto my-4 max-h-60">
 
 *It's a feature, not a bug... right?*
 ---
@@ -625,7 +621,7 @@ class: text-center
 
 # Optimizing for 3 Hours... 🕒
 
-<img src="/memes/meme_optimize_3hrs_for_2ms.txt" alt="Meme: Optimize 3hrs for 2ms - Stonks with tiny arrow" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_optimize_3hrs_for_2ms.png" alt="The 'stonks' meme character with a tiny upward arrow, humorously depicting optimizing for 3 hours to save only 2 milliseconds." class="mx-auto my-4 max-h-60">
 
 **Hey, every millisecond counts... right? ...Right?** 🤔
 
@@ -820,7 +816,7 @@ class: text-center
 
 # "Premature optimization is the root of all evil." - Donald Knuth
 
-<img src="/memes/meme_premature_optimization_evil.txt" alt="Meme: Premature optimization evil - Devil emoji" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_premature_optimization_evil.png" alt="A devil emoji representing the concept that 'premature optimization is the root of all evil.'" class="mx-auto my-4 max-h-60">
 
 **Seriously, profile first!** 🙏
 ---
@@ -998,4 +994,4 @@ layout: two-cols
 </div>
 
 <!-- You can add a fun image or a final meme here related to questions or thanking the audience -->
-<img src="/memes/meme_compiler_optimization_magic.txt" alt="Meme: Compiler Magic for Q&A" class="mx-auto my-4 max-h-50">
+<img src="/memes/meme_compiler_optimization_magic.png" alt="A wizard conjuring spells, humorously illustrating 'Compiler Optimization Magic'." class="mx-auto my-4 max-h-50">
