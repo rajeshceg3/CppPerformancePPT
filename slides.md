@@ -60,10 +60,8 @@ layout: default
 - Reduced user engagement 💔
 - Competitive disadvantage 🐌
 
-:::กาซ้อน
-layout: center
----
-<img src="/memes/meme_O_n_factorial_horror.txt" alt="Meme: O(n!) horror - A character looking horrified/panicked at a computer screen" class="mx-auto my-4 max-h-60">
+::layout: center ---
+<img src="/memes/meme_O_n_factorial_horror.png" alt="A character looks horrified while staring at a computer screen displaying 'O(n!)'" class="mx-auto my-4 max-h-60">
 :::
 ---
 layout: default
@@ -112,7 +110,7 @@ Profilers help you understand where your program spends its time and resources.
 5. Optimize.
 6. Repeat.
 
-<!-- TODO: Add a visual chart/graph placeholder if possible, or describe what it would show -->
+[Visual Description: A pie chart titled "Program Time Distribution". The chart is divided into slices representing different functions or modules. For example: 'FunctionA (45%)', 'FunctionB (30%)', 'ModuleC (15%)', 'Other (10%)'. Each slice has a different color and a label indicating the function/module name and its percentage of total execution time. This visual clearly highlights the major hotspots in the program.]
 <!-- Visual: A pie chart showing time distribution in a sample program -->
 
 ---
@@ -133,15 +131,20 @@ layout: default
 | O(2ⁿ)    | Exponential   | Recursive Fibonacci         | Bad 😱     |
 | O(n!)    | Factorial     | Travelling Salesman (naive) | Awful 💀   |
 
-<!-- TODO: Add a visual complexity chart placeholder -->
+[Visual Description: A graph titled "Big O Complexity Growth". The X-axis represents 'Input Size (n)' and the Y-axis represents 'Time/Operations'. Several curves are plotted:
+- O(1) is a flat horizontal line, showing constant time.
+- O(log n) rises very slowly.
+- O(n) is a straight diagonal line, showing linear growth.
+- O(n log n) rises more steeply than O(n) but less than O(n^2).
+- O(n^2) curves upwards sharply, showing quadratic growth.
+- O(2^n) rises extremely steeply, demonstrating exponential growth and quickly becoming much larger than the others.
+Each curve is labeled with its Big O notation. The graph illustrates how different algorithmic complexities scale with increasing input size.]
 <!-- Visual: A graph showing different Big O curves (n vs time) -->
 
 **Key takeaway**: Algorithmic complexity often has the BIGGEST impact on performance for large inputs.
 
-:::กาซ้อน
-layout: center
----
-<img src="/memes/meme_O_n_squared_oops.txt" alt="Meme: O(n^2) oops - A character sweating profusely" class="mx-auto my-4 max-h-60">
+::layout: center ---
+<img src="/memes/meme_O_n_squared_oops.png" alt="A character is sweating profusely, reacting to 'O(n^2)' complexity." class="mx-auto my-4 max-h-60">
 :::
 ---
 layout: default
@@ -200,7 +203,10 @@ Consider:
 | `std::map`            | Sorted associative array (Red-Black Tree) | Ordered keys, `log n` access       | Higher overhead than `unordered_map`     |
 | `std::unordered_map`  | Hash table                                | Average `O(1)` access              | Unordered, worst-case `O(n)`             |
 
-<!-- TODO: Add visual diagrams of data structures -->
+[Visual Descriptions:
+- std::vector: A series of contiguous rectangular blocks, each representing an element in memory. Labeled 'std::vector: [ ][ ][ ][ ]...'. Arrows might show capacity vs. size.
+- std::list: A sequence of nodes, where each node is a box containing 'data' and a 'pointer' (arrow) to the next node. The last node's pointer goes to 'nullptr'. Labeled 'std::list: [Data|Next] -> [Data|Next] -> NULL'.
+- Hash Table (conceptual std::unordered_map): A series of 'buckets' (often shown as array indices). Some buckets might be empty, others might contain one or more key-value pairs, or pointers to linked lists of pairs if collisions occur. An arrow from a 'hash function' points to a bucket. Labeled 'Hash Table / std::unordered_map'.]
 <!-- Visual: Simple diagrams of vector (contiguous blocks), list (nodes and pointers), hash table (buckets) -->
 
 **Memory Layout Importance**: Contiguous memory (like in `std::vector`) is generally better for CPU caches.
@@ -267,7 +273,10 @@ layout: default
     -   Organize data to be accessed together (e.g., struct of arrays vs. array of structs, depending on access patterns).
     -   Avoid pointer chasing through memory.
 
-<!-- TODO: Add structure padding visualization -->
+[Visual Description: Two scenarios are shown side-by-side.
+Scenario A (Inefficient): A struct layout like `char a; int b; char c;`. Below it, a memory layout diagram shows `a` (1 byte), then 3 bytes of padding, then `b` (4 bytes), then `c` (1 byte), then 3 bytes of padding to align to a hypothetical 8-byte boundary if part of an array. Total size: 12 bytes.
+Scenario B (Efficient): The same struct members reordered as `int b; char a; char c;`. Below it, a memory layout diagram shows `b` (4 bytes), then `a` (1 byte), then `c` (1 byte), then 2 bytes of padding. Total size: 8 bytes.
+The visual highlights how reordering members can reduce padding and overall size, improving cache utilization.]
 <!-- Visual: Diagram showing how struct members might be padded to align with cache lines, or how reordering struct members can improve packing. -->
 
 ---
@@ -277,7 +286,7 @@ class: text-center
 
 # Cache Misses Be Like... 😭
 
-<img src="/memes/meme_cache_miss_pain.txt" alt="Meme: Cache misses be like - A character waiting impatiently" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_cache_miss_pain.png" alt="A character waits impatiently, captioned 'Cache Misses Be Like...'" class="mx-auto my-4 max-h-60">
 
 *(Imagine the CPU sighing dramatically)*
 ---
@@ -423,7 +432,7 @@ class: text-center
 
 # Template Errors Be Like... 🤯
 
-<img src="/memes/meme_template_error_wall.txt" alt="Meme: Template errors - A huge wall of cryptic text" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_template_error_wall.png" alt="A developer faces a massive, overwhelming wall of cryptic template error messages." class="mx-auto my-4 max-h-60">
 
 *It's a feature, not a bug... right?*
 ---
@@ -615,7 +624,13 @@ layout: default
     -   GCC/Clang: `-fopt-info-all` (or more specific like `-fopt-info-vec`).
     -   Shows what optimizations the compiler applied (or failed to apply).
 
-<!-- TODO: Add a profiler comparison chart placeholder -->
+[Visual Description: A table comparing C++ profilers. Columns: "Profiler", "Platform", "Typical Overhead", "Key Features/Use Cases".
+Rows:
+- Profiler: Valgrind (Callgrind/Cachegrind) | Platform: Linux | Typical Overhead: High (10x-100x slowdown) | Key Features/Use Cases: Detailed call graphs, cache simulation, memory access analysis. Good for deep, offline analysis.
+- Profiler: Perf | Platform: Linux | Typical Overhead: Low | Key Features/Use Cases: Kernel-level, sampling profiler, hardware counters, flame graphs. Good for system-wide analysis and low-overhead production profiling.
+- Profiler: Intel VTune Profiler | Platform: Windows, Linux | Typical Overhead: Low to Medium | Key Features/Use Cases: Advanced hardware-based sampling, hotspot analysis, microarchitecture insights, parallelism analysis. Good for optimizing for Intel CPUs.
+- Profiler: Visual Studio Profiler | Platform: Windows | Typical Overhead: Medium | Key Features/Use Cases: Integrated with VS IDE, CPU sampling and instrumentation, memory usage. Good for Windows developers.
+- Profiler: Xcode Instruments | Platform: macOS | Typical Overhead: Medium | Key Features/Use Cases: Integrated with Xcode, time profiling, memory leaks, energy usage. Good for macOS/iOS developers.]
 <!-- Visual: A simple table comparing features of Perf, Valgrind, VTune -->
 
 ---
@@ -625,7 +640,7 @@ class: text-center
 
 # Optimizing for 3 Hours... 🕒
 
-<img src="/memes/meme_optimize_3hrs_for_2ms.txt" alt="Meme: Optimize 3hrs for 2ms - Stonks with tiny arrow" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_optimize_3hrs_for_2ms.png" alt="The 'stonks' meme character with a tiny upward arrow, humorously depicting optimizing for 3 hours to save only 2 milliseconds." class="mx-auto my-4 max-h-60">
 
 **Hey, every millisecond counts... right? ...Right?** 🤔
 
@@ -820,7 +835,7 @@ class: text-center
 
 # "Premature optimization is the root of all evil." - Donald Knuth
 
-<img src="/memes/meme_premature_optimization_evil.txt" alt="Meme: Premature optimization evil - Devil emoji" class="mx-auto my-4 max-h-60">
+<img src="/memes/meme_premature_optimization_evil.png" alt="A devil emoji representing the concept that 'premature optimization is the root of all evil.'" class="mx-auto my-4 max-h-60">
 
 **Seriously, profile first!** 🙏
 ---
@@ -998,4 +1013,4 @@ layout: two-cols
 </div>
 
 <!-- You can add a fun image or a final meme here related to questions or thanking the audience -->
-<img src="/memes/meme_compiler_optimization_magic.txt" alt="Meme: Compiler Magic for Q&A" class="mx-auto my-4 max-h-50">
+<img src="/memes/meme_compiler_optimization_magic.png" alt="A wizard conjuring spells, humorously illustrating 'Compiler Optimization Magic'." class="mx-auto my-4 max-h-50">
