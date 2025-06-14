@@ -110,8 +110,7 @@ Profilers help you understand where your program spends its time and resources.
 5. Optimize.
 6. Repeat.
 
-<!-- TODO: Add a visual chart/graph placeholder if possible, or describe what it would show -->
-<!-- Visual: A pie chart showing time distribution in a sample program -->
+**(Imagine a pie chart here, illustrating how a profiler might show time distribution: e.g., 60% in function A, 25% in function B, 15% in other functions.)**
 
 ---
 layout: default
@@ -131,8 +130,7 @@ layout: default
 | O(2ⁿ)    | Exponential   | Recursive Fibonacci         | Bad 😱     |
 | O(n!)    | Factorial     | Travelling Salesman (naive) | Awful 💀   |
 
-<!-- TODO: Add a visual complexity chart placeholder -->
-<!-- Visual: A graph showing different Big O curves (n vs time) -->
+**(Imagine a graph here, with 'Input Size (n)' on the x-axis and 'Time' on the y-axis, showing curves for O(1) (flat), O(log n) (slowly rising), O(n) (linear), O(n log n) (moderately steep), O(n²) (steeply rising), and O(2ⁿ) (extremely steep), illustrating their comparative growth rates.)**
 
 **Key takeaway**: Algorithmic complexity often has the BIGGEST impact on performance for large inputs.
 
@@ -195,9 +193,6 @@ Consider:
 | `std::deque`          | Double-ended queue                        | Fast front/back insert/delete      | Slower than vector, complex memory       |
 | `std::map`            | Sorted associative array (Red-Black Tree) | Ordered keys, `log n` access       | Higher overhead than `unordered_map`     |
 | `std::unordered_map`  | Hash table                                | Average `O(1)` access              | Unordered, worst-case `O(n)`             |
-
-<!-- TODO: Add visual diagrams of data structures -->
-<!-- Visual: Simple diagrams of vector (contiguous blocks), list (nodes and pointers), hash table (buckets) -->
 
 **Memory Layout Importance**: Contiguous memory (like in `std::vector`) is generally better for CPU caches.
 
@@ -263,8 +258,7 @@ layout: default
     -   Organize data to be accessed together (e.g., struct of arrays vs. array of structs, depending on access patterns).
     -   Avoid pointer chasing through memory.
 
-<!-- TODO: Add structure padding visualization -->
-<!-- Visual: Diagram showing how struct members might be padded to align with cache lines, or how reordering struct members can improve packing. -->
+**(Imagine a diagram showing a struct with members of different sizes. Padding bytes might be inserted by the compiler between members to ensure that each member aligns to a specific memory boundary (e.g., a 4-byte integer aligning to a 4-byte address). Reordering members can sometimes reduce total padding and overall structure size.)**
 
 ---
 layout: center
@@ -365,7 +359,7 @@ layout: default
     -   Libraries like Intel's IPP or Eigen can simplify this.
 -   **Performance Gains**: Can be significant (2x, 4x, or more) for suitable workloads like image processing, physics simulations, scientific computing.
 
-<!-- Visual: Diagram showing scalar (one-by-one) vs. SIMD (multiple at once) processing -->
+**(Imagine a diagram here: Scalar processing shows one operation on one piece of data at a time. SIMD processing shows one instruction performing the same operation simultaneously on multiple pieces of data stored in wider registers.)**
 
 ---
 layout: default
@@ -568,7 +562,6 @@ BENCHMARK(BM_VectorCreation)->Range(1<<10, 1<<20); // Test with various sizes
 
 // To run (after compiling with benchmark library): ./my_benchmark
 
-// --- Another Example from issue ---
 // static void BM_VectorPushBack(benchmark::State& state) {
 //     for (auto _ : state) {
 //         std::vector<int> v;
@@ -611,8 +604,7 @@ layout: default
     -   GCC/Clang: `-fopt-info-all` (or more specific like `-fopt-info-vec`).
     -   Shows what optimizations the compiler applied (or failed to apply).
 
-<!-- TODO: Add a profiler comparison chart placeholder -->
-<!-- Visual: A simple table comparing features of Perf, Valgrind, VTune -->
+**(Imagine a comparison table here. Key aspects might include: Perf - Linux-specific, low overhead, hardware counters; Valgrind (Callgrind/Cachegrind) - Linux/macOS, detailed call graphs & cache simulation, higher overhead; Intel VTune - Cross-platform (Linux/Windows), advanced analysis for Intel CPUs, rich GUI.)**
 
 ---
 layout: center
@@ -755,7 +747,7 @@ layout: default
 -   Stage 3: Transforms data, `emplace_back`ing into final `std::vector`, also parallelized.
 
 **Results Visualization**:
--   [Placeholder for a chart showing throughput increase and memory usage decrease]
+-   **(Imagine a chart here visualizing the results: one bar showing a significant increase in data throughput (e.g., 'items processed per second') and another bar showing a noticeable decrease in peak memory usage after optimizations.)**
 -   Significant reduction in end-to-end processing time.
 -   Lower peak memory usage.
 
@@ -993,5 +985,4 @@ layout: two-cols
   </a>
 </div>
 
-<!-- You can add a fun image or a final meme here related to questions or thanking the audience -->
 <img src="/memes/meme_compiler_optimization_magic.png" alt="A wizard conjuring spells, humorously illustrating 'Compiler Optimization Magic'." class="mx-auto my-4 max-h-50">
