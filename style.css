@@ -1,11 +1,7 @@
 /* style.css */
 
-/* Import a clean, readable font if desired (e.g., from Google Fonts) */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
-
 /* Basic dark theme and gradient background (similar to frontmatter for consistency) */
 .slidev-layout {
-  /* font-family: 'Roboto', sans-serif; */
   background-color: #1a1a2e; /* Dark blue/purple base */
   color: #e0e0e0; /* Light text color */
 }
@@ -19,13 +15,6 @@
 h1, h2, h3, h4, h5, h6 {
   color: #87CEFA; /* Light Sky Blue as an accent */
   font-weight: bold;
-}
-
-h1 {
-  /* Example of gradient text for main titles - might need specific class for title slide */
-  /* background: -webkit-linear-gradient(45deg, #87CEFA, #BA55D3); */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
 }
 
 /* Links styling */
