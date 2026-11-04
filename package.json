@@ -7,10 +7,11 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.43.0",  // Use a recent version, adjust as needed
-    "@slidev/theme-default": "^0.21.0" // Or specific version for theme
+    "@slidev/cli": "^0.43.0",
+    "@slidev/theme-default": "^0.21.0"
   },
   "devDependencies": {
-    "playwright-chromium": "*" // For PDF export, optional
+    "@iconify-json/mdi": "^1.2.3",
+    "playwright-chromium": "*"
   }
 }
