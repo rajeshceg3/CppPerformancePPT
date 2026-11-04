@@ -13,7 +13,6 @@ drawings:
 transition: slide-left
 title: C++ Performance Optimization Mastery
 ---
----
 # C++ Performance Optimization Mastery 🚀
 
 ## Blazingly Fast Code & Furious Optimizations 🔥💻
