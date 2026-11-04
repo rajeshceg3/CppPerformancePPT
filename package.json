@@ -7,11 +7,15 @@
     "export": "slidev export"
   },
   "dependencies": {
+    "@fontsource/noto-emoji": "5.3.2",
     "@slidev/cli": "^0.43.0",
     "@slidev/theme-default": "^0.21.0"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
     "playwright-chromium": "*"
+  },
+  "overrides": {
+    "fuse.js": "7.1.0"
   }
 }

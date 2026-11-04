@@ -1,3 +1,5 @@
+@import "@fontsource/noto-emoji/400.css";
+
 /* style.css */
 
 /* Basic dark theme and gradient background (similar to frontmatter for consistency) */
@@ -104,3 +106,6 @@ body { /* This is a broad selector, consider more specific ones if emojis are us
   color: initial; /* Or specific styling for notes if desired */
   background-color: initial;
 }
+
+/* Bundle emoji glyphs so slides do not depend on the viewer OS fonts. */
+.slidev-layout { font-family: "Roboto", "Noto Emoji", ui-sans-serif, system-ui, sans-serif; }
